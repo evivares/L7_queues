@@ -1,5 +1,5 @@
 # plugin_system
-Plugin system for python code and uses the `pika` python module and `concurrent.futures` module for multi-threading in order to interact with RabbitMQ. The code also utilizes the `importlib` python module to dynamically load your custom modules inside the `plugins` folder.
+Plugin system for python code that utilizes the `pika` and `concurrent.futures` python libraries. `concurrent.futures` is used for multi-threading. The sample plugins are used to interact with RabbitMQ broker. The code also utilizes the `importlib` python library to dynamically load your custom modules inside the `plugins` folder.
 
 There are two(2) sample plugin modules inside the `plugins` folder. The `publish` plugin is a plugin that is used to send a message to a RabbitMQ queue. The `retrieve` plugin is a plugin that is used to get messages from a RabbitMQ queue and just currently prints the message but could easily be modified to execute a function that does processing on the message.
 
