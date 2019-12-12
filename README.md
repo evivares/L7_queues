@@ -6,9 +6,13 @@ There are two(2) sample plugin modules inside the `plugins` folder. The `publish
 The examples uses a common `execute` function that can be called with the same number of arguments.
 
 ## Dynamically loading a plugin
-1. Create your plugin in the `plugins` folder with a class of `Plugin`.
-2. Modify the `app.py` file replacing the **PLUGIN_NAME** variable with the plugin to be dynamically loaded.
-3. Call the `execute` function providing the arguments.
+1. First, you need to install the required python libraries.
+
+   `(venv)$ pip3 install -r requirements.txt`
+
+2. Create your plugin in the `plugins` folder with a class of `Plugin`.
+3. Modify the `app.py` file replacing the **PLUGIN_NAME** variable with the plugin to be dynamically loaded.
+4. Call the `execute` function providing the arguments.
 
 ## Creating the RabbitMQ Managment Console Docker container
 At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
