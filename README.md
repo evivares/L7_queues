@@ -12,4 +12,5 @@ The examples uses a common `execute` function that can be called with the same n
 
 ## Creating the RabbitMQ Managment Console Docker container
 At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
+
 `$ docker-compose up -d`
