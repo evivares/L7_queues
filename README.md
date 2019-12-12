@@ -5,6 +5,11 @@ There are two(2) sample plugin modules inside the `plugins` folder. The `publish
 
 The examples uses a common `execute` function that can be called with the same number of arguments.
 
+## Creating the RabbitMQ Managment Console Docker container
+At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
+
+`$ docker-compose up -d`
+
 ## Dynamically loading a plugin
 1. First, you need to install the required python libraries.
 
@@ -19,8 +24,3 @@ q = queue name
 m = message
 h = RabbitMQ hostname
 ```
-
-## Creating the RabbitMQ Managment Console Docker container
-At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
-
-`$ docker-compose up -d`
