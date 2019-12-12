@@ -12,7 +12,13 @@ The examples uses a common `execute` function that can be called with the same n
 
 2. Create your plugin in the `plugins` folder with a class of `Plugin`.
 3. Modify the `app.py` file replacing the **PLUGIN_NAME** variable with the plugin to be dynamically loaded.
-4. Call the `execute` function providing the arguments.
+4. Call the `execute` function providing the arguments:
+
+```
+q = queue name
+m = message
+h = RabbitMQ hostname
+```
 
 ## Creating the RabbitMQ Managment Console Docker container
 At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
