@@ -9,3 +9,7 @@ The examples uses a common `execute` function that can be called with the same n
 1. Create your plugin in the `plugins` folder with a class of `Plugin`.
 2. Modify the `app.py` file replacing the **PLUGIN_NAME** variable with the plugin to be dynamically loaded.
 3. Call the `execute` function providing the arguments.
+
+## Creating the RabbitMQ Managment Console Docker container
+At the command prompt, run the command below to spin up the RabbitMQ container in daemon mode:
+`$ docker-compose up -d`
