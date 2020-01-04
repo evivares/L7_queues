@@ -2,10 +2,10 @@ version: "3"
 services:
   rabbit1:
     image: rabbitmq:3-management
-    hostname: rabbit1
+    hostname: L1_Node_1
     environment:
       RABBITMQ_ERLANG_COOKIE: "secret string"
-      RABBITMQ_NODENAME: rabbit1
+      RABBITMQ_NODENAME: L1_Node_1
     volumes:
       - "./rabbitmq.config:/etc/rabbitmq/rabbitmq.config"
       - "./definitions.json:/etc/rabbitmq/definitions.json"
