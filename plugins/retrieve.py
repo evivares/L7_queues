@@ -8,6 +8,7 @@ Plugin: Retrieve
 class Plugin:
     def __init__(self, *args, **kwargs):
         print('Plugin init ("Retrieve messages from RabbitMQ Queue"):', args, kwargs)
+        self.configs = kwargs['configs']
         import pika
         self.pika = pika
         import time
@@ -17,8 +18,11 @@ class Plugin:
 
     def retrieve(self, q, m, h):
         # Create a new instance of the Connection object
+        credentials = self.pika.credentials.PlainCredentials(
+            self.configs.get('rabbitmq', 'uname'),
+            self.configs.get('rabbitmq', 'pword'))
         connection = self.pika.BlockingConnection(
-            self.pika.ConnectionParameters(host=h))
+            self.pika.ConnectionParameters(host=h, credentials=credentials))
 
         # Create a new channel with the next available channel number or pass in a channel number to use
         channel = connection.channel()
@@ -37,8 +41,11 @@ class Plugin:
 
     def get_message_count(self, q, m, h):
         # Create a new instance of the Connection object
+        credentials = self.pika.credentials.PlainCredentials(
+            self.configs.get('rabbitmq', 'uname'),
+            self.configs.get('rabbitmq', 'pword'))
         connection = self.pika.BlockingConnection(
-            self.pika.ConnectionParameters(host=h))
+            self.pika.ConnectionParameters(host=h, credentials=credentials))
 
         # Create a new channel with the next available channel number or pass in a channel number to use
         channel = connection.channel()
