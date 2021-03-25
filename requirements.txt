@@ -15,7 +15,7 @@ PyJWT==1.7.1
 pyserial==3.4
 pytube==9.3.5
 pytz==2018.7
-PyYAML==5.2
+PyYAML==5.4
 requests==2.22.0
 six==1.13.0
 twilio==6.35.1
